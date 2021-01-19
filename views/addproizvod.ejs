@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <%- include('partials/navbar.ejs'); %>
+    <div class='container'>
+        <br>
+        <div class='row'>
+            <div style='width:35%;margin:0 auto;'>
+                <h2 style='text-align: center;'>Dodaj novi proizvod</h2>
+
+                <form action='/prodavnica/<%=prodavnica%>' method='post'>
+                    <div class='form-group'><input type='text' class='form-control' placeholder="Naziv proizvoda"
+                            name='ime' /></div>
+                    <div class='form-group'><input type='number' min='1' step='1' class='form-control'
+                            placeholder="Kolicina" name='kolicina' /></div>
+                    <div class='form-group'><input type='number' min='1' step='0.01' class='form-control'
+                            placeholder="Cena" name='cena' /></div>
+                   <h5>Kategorija proizvoda</h5>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="Muskarci" name="kategorija" value="Muskarci" checked />
+                        <label class="form-check-label" for="Muskarci">Za muskarce</label><br> </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="Zene" name="kategorija" value="Zene" />
+                        <label class="form-check-label" for="Zene">Za zene</label><br> </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="Deca" name="kategorija" value="Deca" />
+                        <label class="form-check-label" for="Deca">Za decu</label><br> </div>
+                        <h5>Tip proizvoda</h5>
+                        <div class='muskarci zene deca'>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id='tip1' name="tip"  value="Mirisi" checked>
+                            <label class="form-check-label" for="tip1">Miris</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='tip2' name="tip"  value="Nega tela" >
+                            <label class="form-check-label" for="tip2">Nega tela</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='tip3' name="tip"  value="Nega kose" >
+                            <label class="form-check-label" for="tip3">Nega kose</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='tip4' name="tip"  value="Nega lica" >
+                            <label class="form-check-label" for="tip4">Nega lica</label>
+                          </div>
+                         </div>
+                         <div class='zene'>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='tip5' name="tip"  value="Sminka" >
+                            <label class="form-check-label" for="tip5">Sminka</label>
+                          </div>
+                        </div>
+                        <h5>Podtip proizvoda</h5>
+
+                        <div class='mirisi'>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip1' name="podtip"  value="Dezodorans" >
+                            <label class="form-check-label" for="podtip1">Dezodorans</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip2' name="podtip"  value="Anti-perspirant" >
+                            <label class="form-check-label" for="podtip2">Anti-perspirant</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip3' name="podtip"  value="Roll-on" >
+                            <label class="form-check-label" for="podtip3">Roll-on</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip4' name="podtip"  value="Toaletna voda" >
+                            <label class="form-check-label" for="podtip4">Toaletna voda</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip5' name="podtip"  value="Parfem" >
+                            <label class="form-check-label" for="podtip5">Parfem</label>
+                          </div>
+                        </div>
+                        <div class='negatela' style='display:none'>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip6' name="podtip"  value="Zastita od sunca" >
+                            <label class="form-check-label" for="podtip6">Zaštita od sunca</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip7' name="podtip"  value="Tusiranje" >
+                            <label class="form-check-label" for="podtip7">Kupka/Gel za tuširanje</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip8' name="podtip"  value="Sapun" >
+                            <label class="form-check-label" for="podtip8">Sapun</label>
+                          </div> 
+                           <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip10' name="podtip"  value="Masaza" >
+                            <label class="form-check-label" for="podtip10">Masaža</label>
+                          </div>
+                          <div class='zene'>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip9' name="podtip"  value="Mleko za telo" >
+                            <label class="form-check-label" for="podtip9">Mleko za telo</label></div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" id='podtip11' name="podtip"  value="Depilacija" >
+                              <label class="form-check-label" for="podtip11">Depilacija</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip12' name="podtip"  value="Brijanje" >
+                            <label class="form-check-label" for="podtip12">Brijanje</label>
+                        </div>
+                          </div>
+                          </div>
+                        <div class='negakose' style='display:none'>
+                         
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip13' name="podtip"  value="Sampon" >
+                            <label class="form-check-label" for="podtip13">Šampon</label>
+                          </div>
+                          <div class='zene'>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip14' name="podtip"  value="Farba" >
+                            <label class="form-check-label" for="podtip14">Farba za kosu</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip15' name="podtip"  value="Maska za kosu" >
+                            <label class="form-check-label" for="podtip15">Maska za kosu</label>
+                          </div>
+                         
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip16' name="podtip"  value="Balzam za kosu" >
+                            <label class="form-check-label" for="podtip16">Balzam za kosu</label>
+                          </div>
+                           <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip17' name="podtip"  value="Stilizovanje kose" >
+                            <label class="form-check-label" for="podtip17">Stilizovanje kose</label>
+                          </div>
+                          </div>
+                        </div>
+                          <div class='negalica' style='display:none'>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip18' name="podtip"  value="Krema za lice" >
+                            <label class="form-check-label" for="podtip18">Krema za lice</label>
+                          </div>
+                          <div class='muskarci'>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" id='podtip24' name="podtip"  value="Brijanje" >
+                              <label class="form-check-label" for="podtip24">Brijanje</label>
+                            </div>
+                          </div>
+                          <div class='zene'>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip19' name="podtip"  value="Nega oko ociju" >
+                            <label class="form-check-label" for="podtip19">Nega oko očiju</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip20' name="podtip"  value="Nega usana" >
+                            <label class="form-check-label" for="podtip20">Nega usana</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip21' name="podtip"  value="Maska za lice" >
+                            <label class="form-check-label" for="podtip21">Maska za lice</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip22' name="podtip"  value="Ciscenje lica" >
+                            <label class="form-check-label" for="podtip22">Čišćenje lica</label>
+                          </div>
+                          </div>
+                          </div>
+                          <div class='sminka' style='display:none'>
+                            <div class='zene'>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip23' name="podtip"  value="Trepavice" >
+                            <label class="form-check-label" for="podtip23">Trepavice</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip24' name="podtip"  value="Nokti" >
+                            <label class="form-check-label" for="podtip24">Nokti</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip25' name="podtip"  value="Karmin" >
+                            <label class="form-check-label" for="podtip25">Karmin</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip26' name="podtip"  value="Puder" >
+                            <label class="form-check-label" for="podtip26">Puder</label>
+                          </div>
+                           <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip30' name="podtip"  value="Tecni puder" >
+                            <label class="form-check-label" for="podtip30">Tečni puder</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip27' name="podtip"  value="Rumenilo" >
+                            <label class="form-check-label" for="podtip27">Rumenilo</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip28' name="podtip"  value="Senka" >
+                            <label class="form-check-label" for="podtip28">Senka</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip29' name="podtip"  value="Ajlajner" >
+                            <label class="form-check-label" for="podtip29">Ajlajner</label>
+                          </div>
+                         
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip31' name="podtip"  value="Korektor" >
+                            <label class="form-check-label" for="podtip30">Korektor</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip32' name="podtip"  value="Prah" >
+                            <label class="form-check-label" for="podtip32">Prah</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip33' name="podtip"  value="Baza za sminku" >
+                            <label class="form-check-label" for="podtip33">Baza za šminku</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip34' name="podtip"  value="Bronzer" >
+                            <label class="form-check-label" for="podtip34">Bronzer</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip35' name="podtip"  value="Iluminator" >
+                            <label class="form-check-label" for="podtip35">Iluminator</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip36' name="podtip"  value="Cetkice" >
+                            <label class="form-check-label" for="podtip36">Četkice</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip37' name="podtip"  value="Olovke za oci" >
+                            <label class="form-check-label" for="podtip37">Olovke za oči</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip38' name="podtip"  value="Sredstvo za skidanje sminke" >
+                            <label class="form-check-label" for="podtip38">Sredstvo za skidanje šminke</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip39' name="podtip"  value="Oblikovanje obrva" >
+                            <label class="form-check-label" for="podtip39">Oblikovanje obrva</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" id='podtip40' name="podtip"  value="Proizvodi za konturisanje" >
+                            <label class="form-check-label" for="podtip40">Proizvodi za konturisanje</label>
+                          </div>
+                        </div>
+                          </div>
+                    <div class='form-group'><textarea rows="4" cols="30" name='opis' class='btn-block' placeholder="Opis proizvoda"></textarea></div>
+                    <div class='form-group'> <input type='url' class='form-control' placeholder="URL slike proizvoda"
+                            name='url' /></div>
+                    <div class='form-group'> <button class='btn btn-lg btn-info btn-block form-control'
+                            style='margin-top:5%;'>Dodaj novi proizvod</button> </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include ('partials/footer.ejs'); %>
+
+    <script src="/addproizvod.js" async defer></script>
+</body>
+
+</html>

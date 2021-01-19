@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href="/styles1.css" />
+    <link rel="stylesheet" href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' />
+</head>
+
+<body>
+    <%- include('partials/navbar.ejs'); %>
+        <input style="display:none" id="brojka" value="<%=Math.ceil(proizvodi.length/broj)%>" />
+        <div class='container'>
+                <div class='jumbotron'>
+                    <h1>Stranica o proizvodima u prodavnici: <%= prodavnica.ime %>
+                    </h1>
+                </div>
+
+                <a href='/prodavnica/<%=prodavnica._id%>/addproduct' class='btn btn-primary'>Dodaj novi proizvod</a>
+                <hr>
+                <% if(proizvodi==undefined || proizvodi.length==0) {%>
+                    <h4>Trenutno Nema proizvoda u ovoj prodavnici</h4>
+                    <%}else{%>
+
+                        <div class='row'>
+
+                            <div class='col-md-12'>
+                                <h4>Dostupni proizvodi u prodavnici:</h4>
+                            </div>
+                                <br>
+                                <% for(var i=0;i<proizvodi.length;i++){%>
+                                    <div class='col-lg-3 col-sm-4 col-xs-6 text-center'>
+                                        <h5>
+                                            <%= proizvodi[i].ime %>
+                                        </h5>
+                                        <div class="omotac">
+                                            <img class='img-thumbnail img-fluid' src="<%=proizvodi[i].url %>"></img>
+                                        </div>
+                                        <h6>Cena:</h6>
+                                        <p class='priceblack'>
+                                            <%=proizvodi[i].cena%> din
+                                        </p>
+                                        <a href='/products/<%=proizvodi[i]._id%>' class=' btn-small btn-info btn-block'
+                                            style='margin-top: 5px;'>Više
+                                            informacija</a>
+
+
+                                        <form method='get'
+                                            action='/profile/prodavac/prodavnica/<%=prodavnica._id%>/proizvodi/<%=proizvodi[i]._id%>/edit'>
+                                            <button class="btn-small btn-info btn-block" style='margin-top: 5px;'>Izmeni
+                                                podatke</button>
+                                        </form>
+                                        <td><button class="btn-danger btn-block btn-small" style='margin-top: 5px;'
+                                                data-toggle="modal"
+                                                data-target="#myModalObrisiProizvod<%= proizvodi[i]._id %>">Ukloni
+                                                proizvod</button>
+                                        </td>
+                                        <!-- pocetak modala -->
+                                        <div class="modal" id="myModalObrisiProizvod<%= proizvodi[i]._id %>"
+                                            tabindex="-1" role="dialog">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Brisanje proizvoda
+                                                            <%= proizvodi[i].ime %>
+                                                        </h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Da li ste sigurni da zelite da izbrišete proizvod?</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Odustani</button>
+                                                        <form method='post'
+                                                            action='/profile/prodavac/prodavnica/<%=prodavnica._id%>/proizvodi/<%=proizvodi[i]._id%>?_method=DELETE'>
+                                                            <button type="submit"
+                                                                class="btn btn-danger">Izbriši</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- kraj modala -->
+                                    </div>
+                                    <%}%>
+                     
+
+                        </div>
+                        <%}%>
+
+        </div>
+        <%- include ('partials/footer.ejs'); %>

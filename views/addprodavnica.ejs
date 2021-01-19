@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <%- include('partials/navbar.ejs'); %>
+        <div class='container' >
+        <br>
+        <div class='row' >
+        <div style='width:35%;margin:0 auto;'>        
+        <h2 style='text-align: center;'>Kreiraj novu prodavnicu</h2>
+
+        <form action='/profile/prodavac/prodavnica' method='post' >
+        <div class='form-group'><input type='text' class='form-control' placeholder="Ime prodavnice" name='ime'/></div>
+        <div class='form-group'><input type='text' class='form-control' placeholder="Adresa prodavnice" name='adresa'/></div> 
+        <div class='form-group'> <button class='btn btn-lg btn-info btn-block form-control' style='margin-top:5%;'>Dodaj novu prodavnicu</button>  </div> 
+
+        </form></div>
+        </div>
+        </div>
+
+        <%- include ('partials/footer.ejs'); %>
+
+        <script src="" async defer></script>
+    </body>
+</html>

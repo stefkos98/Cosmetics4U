@@ -1,0 +1,8 @@
+.list-group-item.active{
+    z-index: 0 !important;
+    background-color: #3d1a68e6 !important;
+    border: none !important;}
+    .form-control{
+        margin-top: 0.5%;
+        margin-bottom: 0.8%;
+      }

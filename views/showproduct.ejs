@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='/cart.css'/>
+</head>
+
+<body>
+  <%- include ('partials/navbar.ejs')%>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-3'>
+        <p class='lead' style='color:#3d1a68e6'>Kategorije</p>
+        <div id='accordion'>
+            <div class="card">
+                <div class="card-header" id="headingOne"
+                    style='color:white !important;background-color: #3d1a68e6;'>
+                    <h5 class="mb-0">
+                        <button class='btn btn-link' style='color:white' data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Muškarci
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse " aria-labelledby="headingOne"
+                    data-parent="#accordion">
+
+                    <div class="card">
+                        <div class="card-header" id="headingOneOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse"
+                                    data-target="#collapseOneOne" aria-expanded="true"
+                                    aria-controls="collapseOneOne">
+                                    Mirisi
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOneOne" class="collapse " aria-labelledby="headingOneOne"
+                            data-parent="#collapseOne">
+                            <li class='list-group-item'><a
+                                    href='/products/show/Muskarci/Mirisi/Dezodorans'>Dezodoransi</a>
+                            </li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Muskarci/Mirisi/Anti-perspirant'>Anti-perspiranti</a>
+                            </li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Muskarci/Mirisi/Roll-on'>Roll-on</a></li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Muskarci/Mirisi/Toaletna voda'>Toaletne
+                                    vode</a>
+                            </li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Muskarci/Mirisi/Parfem'>Parfemi</a>
+                            </li>
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingOneTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse"
+                                    data-target="#collapseOneTwo" aria-expanded="true"
+                                    aria-controls="collapseOneTwo">
+                                    Nega tela
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOneTwo" class="collapse " aria-labelledby="headingOneTwo"
+                            data-parent="#collapseOne">
+                            <li class='list-group-item'><a
+                                    href='/products/show/Muskarci/Nega tela/Zastita od sunca'>Zastita
+                                    od sunca</a></li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Muskarci/Nega tela/Tusiranje'>Kupke/gelovi za
+                                    tusiranje</a>
+                            </li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Muskarci/Nega tela/Sapun'>Sapun</a></li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Muskarci/Nega tela/Masaza'>Masaza</a>
+                            </li>
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingOneThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse"
+                                    data-target="#collapseOneThree" aria-expanded="true"
+                                    aria-controls="collapseOneThree">
+                                    Nega kose
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOneThree" class="collapse " aria-labelledby="headingOneThree"
+                            data-parent="#collapseOne">
+                            <li class='list-group-item'><a
+                                    href='/products/show/Muskarci/Nega kose/Sampon'>Šamponi</a></li>
+
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingOne4">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse"
+                                    data-target="#collapseOne4" aria-expanded="true"
+                                    aria-controls="collapseOne4">
+                                    Nega lica
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOne4" class="collapse " aria-labelledby="headingOne4"
+                            data-parent="#collapseOne">
+                            <li class='list-group-item'><a
+                                    href='/products/show/Muskarci/Nega lica/Krema za lice'>Krema za
+                                    lice</a></li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Muskarci/Nega lica/Brijanje'>Brijanje</a></li>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- ZENE -->
+            <div class="card">
+                <div class="card-header" id="headingTwo"
+                    style='color:white !important;background-color: #3d1a68e6;'>
+                    <h5 class="mb-0">
+                        <button class='btn btn-link' style='color:white' data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            Žene
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo"
+                    data-parent="#accordion">
+
+                    <div class="card">
+                        <div class="card-header" id="headingTwoOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse"
+                                    data-target="#collapseTwoOne" aria-expanded="true"
+                                    aria-controls="collapseTwoOne">
+                                    Mirisi
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseTwoOne" class="collapse " aria-labelledby="headingTwoOne"
+                            data-parent="#collapseTwo">
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Mirisi/Dezodorans'>Dezodoransi</a></li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Mirisi/Anti-perspirant'>Anti-perspiranti</a>
+                            </li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Mirisi/Roll-on'>Roll-on</a></li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Mirisi/Toaletna voda'>Toaletne vode</a>
+                            </li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Mirisi/Parfem'>Parfemi</a>
+                            </li>
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTwoTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse"
+                                    data-target="#collapseTwoTwo" aria-expanded="true"
+                                    aria-controls="collapseTwoTwo">
+                                    Nega tela
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseTwoTwo" class="collapse " aria-labelledby="headingTwoTwo"
+                            data-parent="#collapseTwo">
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Nega tela/Zastita od sunca'>Zastita
+                                    od sunca</a></li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Nega tela/Tusiranje'>Kupke/gelovi za
+                                    tusiranje</a>
+                            </li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Nega tela/Sapun'>Sapun</a></li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Nega tela/Masaza'>Masaža</a>
+                            </li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Nega tela/Mleko za telo'>Mleko za telo</a>
+                            </li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Nega tela/Depilacija'>Depilacija</a>
+                            </li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Nega tela/Brijanje'>Brijanje</a>
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTwoThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse"
+                                    data-target="#collapseTwoThree" aria-expanded="true"
+                                    aria-controls="collapseTwoThree">
+                                    Nega kose
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseTwoThree" class="collapse " aria-labelledby="headingTwoThree"
+                            data-parent="#collapseTwo">
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Nega kose/Sampon'>Šamponi</a></li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Nega kose/Farba'>Farbe za kosu</a></li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Nega kose/Maska za kosu'>Maske za kosu</a>
+                            </li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Nega kose/Balzam za kosu'>Balzami za
+                                    kosu</a></li>
+
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Nega kose/Stilizovanje kose'>Stilizovanje
+                                    kose</a></li>
+
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="heading24">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse"
+                                    data-target="#collapse24" aria-expanded="true"
+                                    aria-controls="collapse24">
+                                    Nega lica
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapse24" class="collapse " aria-labelledby="heading24"
+                            data-parent="#collapseTwo">
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Nega lica/Nega oko ociju'>Nega oko
+                                    ociju</a></li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Nega lica/Nega usana'>Nega usana</a></li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Nega lica/Maska za lice'>Maske za lice</a>
+                            </li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Zene/Nega lica/Ciscenje lica'>Čišćenje lica</a>
+                            </li>
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="heading25">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse"
+                                    data-target="#collapse25" aria-expanded="true"
+                                    aria-controls="collapse25">
+                                    Šminka
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapse25" class="collapse " aria-labelledby="heading25"
+                            data-parent="#collapseTwo">
+                            <li class='list-group-item'><a href='/products/show/Zene/Sminka/Trepavice'>Trepavice</a></li>
+                            <li class='list-group-item'><a href='/products/show/Zene/Sminka/Nokti'>Nokti</a></li>
+                            <li class='list-group-item'><a href='/products/show/Zene/Sminka/Karmin'>Karmini</a></li>
+                            <li class='list-group-item'><a href='/products/show/Zene/Sminka/Puder'>Puderi</a></li>
+                            <li class='list-group-item'><a href='/products/show/Zene/Sminka/Tecni puder'>Tecni puderi</a></li>
+                            <li class='list-group-item'><a href='/products/show/Zene/Sminka/Rumenilo'>Rumenila</a></li>
+                            <li class='list-group-item'><a href='/products/show/Zene/Sminka/Senka'>Senke</a></li>
+                            <li class='list-group-item'><a href='/products/show/Zene/Sminka/Ajlajner'>Ajlajneri</a></li>
+                            <li class='list-group-item'><a href='/products/show/Zene/Sminka/Korektor'>Korektori</a></li>
+                            <li class='list-group-item'><a href='/products/show/Zene/Sminka/Prah'>Prahovi</a></li>
+                            <li class='list-group-item'><a href='/products/show/Zene/Sminka/Baza za sminku'>Baza za sminku</a></li>
+                            <li class='list-group-item'><a href='/products/show/Zene/Sminka/Bronzer'>Bronzeri</a></li>
+                            <li class='list-group-item'><a href='/products/show/Zene/Sminka/Iluminator'>Iluminatori</a></li>
+                            <li class='list-group-item'><a href='/products/show/Zene/Sminka/Cetkice'>Cetkice</a></li>
+                            <li class='list-group-item'><a href='/products/show/Zene/Sminka/Olovke za oci'>Olovke za oci</a></li>
+                            <li class='list-group-item'><a href='/products/show/Zene/Sminka/Sredstvo za skidanje sminke'>Sredstvo za skidanje sminke</a></li>
+                            <li class='list-group-item'><a href='/products/show/Zene/Sminka/Oblikovanje obrva'>Oblikovanje obrva</a></li>
+                            <li class='list-group-item'><a href='/products/show/Zene/Sminka/Proizvodi za konturisanje'>Proizvodi za konturisanje</a></li>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- KRAJ ZENE -->
+            <!-- DECA -->
+            <div class="card">
+                <div class="card-header" id="headingThree"
+                    style='color:white !important;background-color: #3d1a68e6;'>
+                    <h5 class="mb-0">
+                        <button class='btn btn-link' style='color:white' data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="true"
+                            aria-controls="collapseThree">
+                            Deca
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse " aria-labelledby="headingThree"
+                    data-parent="#accordion">
+
+                    <div class="card">
+                        <div class="card-header" id="headingThreeOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse"
+                                    data-target="#collapseThreeOne" aria-expanded="true"
+                                    aria-controls="collapseThreeOne">
+                                    Mirisi
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseThreeOne" class="collapse " aria-labelledby="headingThreeOne"
+                            data-parent="#collapseThree">
+                            <li class='list-group-item'><a
+                                    href='/products/show/Deca/Mirisi/Dezodorans'>Dezodoransi</a></li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Deca/Mirisi/Anti-perspirant'>Anti-perspiranti</a>
+                            </li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Deca/Mirisi/Roll-on'>Roll-on</a></li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Deca/Mirisi/Toaletna voda'>Toaletne vode</a>
+                            </li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Deca/Mirisi/Parfem'>Parfemi</a>
+                            </li>
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingThreeTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse"
+                                    data-target="#collapseThreeTwo" aria-expanded="true"
+                                    aria-controls="collapseThreeTwo">
+                                    Nega tela
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseThreeTwo" class="collapse " aria-labelledby="headingThreeTwo"
+                            data-parent="#collapseThree">
+                            <li class='list-group-item'><a
+                                    href='/products/show/Deca/Nega tela/Zastita od sunca'>Zastita
+                                    od sunca</a></li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Deca/Nega tela/Tusiranje'>Kupke/gelovi za
+                                    tusiranje</a>
+                            </li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Deca/Nega tela/Sapun'>Sapun</a></li>
+                            <li class='list-group-item'><a
+                                    href='/products/show/Deca/Nega tela/Masaza'>Masaza</a>
+                            </li>
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingThreeThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse"
+                                    data-target="#collapseThreeThree" aria-expanded="true"
+                                    aria-controls="collapseThreeThree">
+                                    Nega kose
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseThreeThree" class="collapse "
+                            aria-labelledby="headingThreeThree" data-parent="#collapseThree">
+                            <li class='list-group-item'><a
+                                    href='/products/show/Deca/Nega kose/Sampon'>Šamponi</a></li>
+
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree4">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse"
+                                    data-target="#collapseThree4" aria-expanded="true"
+                                    aria-controls="collapseThree4">
+                                    Nega lica
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseThree4" class="collapse " aria-labelledby="headingThree4"
+                            data-parent="#collapseThree">
+                            <li class='list-group-item'><a
+                                    href='/products/show/Deca/Nega lica/Krema za lice'>Krema za
+                                    lice</a></li>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- KRAJ DECA -->
+        </div>
+    </div>
+      <div class='col-md-9'>
+        <h1>Prikaz više informacija o proizvodu</h1>
+        <div class='img-thumbnail'>
+          <div class='row'>
+            <div class='col-md-4'>
+              <h5 style='text-align: center;'><%= proizvod.ime %></h5>
+
+              <span style='width:1000px;height:1000px'>
+                <img class='img-responsive img-thumbnail img-fluid' style='max-width: 100%;max-height: 100%;'
+                  src="<%=proizvod.url %>"></img>
+
+              </span>
+            </div>
+            <div class='col-md-8'>
+              <br>
+              <div class='caption-full'>
+                <strong>Kategorija:</strong>
+                <% if(proizvod.kategorija){ %>
+                <%= proizvod.kategorija %>
+                <% } else{ %>
+                <p>Nema kategorije za prikazani proizvod</p>
+                <% } %>
+              </div>
+              <div class='caption-full'>
+                <strong>Tip:</strong>
+                <% if(proizvod.tip){ %>
+                <%= proizvod.tip %>
+                <% } else{ %>
+                <p>Nema tipa za prikazani proizvod</p>
+                <% } %>
+              </div>
+              <div class='caption-full'>
+                <strong>Podtip:</strong>
+                <% if(proizvod.podtip){ %>
+                <%= proizvod.podtip %>
+                <% } else{ %>
+                <p>Nema podtipa za prikazani proizvod</p>
+                <% } %>
+              </div>
+              <div class='caption-full'>
+                <strong>Dostupno:</strong>
+                <% if(proizvod.kolicina>0){ %>
+                <%= proizvod.kolicina %>
+                <% } else{ %>
+                <p>Proizvod trenutno nije dostupan</p>
+                <% } %>
+              </div>
+              <p class='priceblack'>
+                <strong style='color:#212529'>Cena:</strong>
+                <%=proizvod.cena%> din
+              </p>
+              <div id='tu'></div>
+              <form method='post' action="/cart/<%=proizvod._id%>/2">
+                <button class='btn btn-small btn-success korpa' name='<%=proizvod._id%>' style='margin-top: 5px;'>Dodaj
+                  u
+                  korpu</button>
+                </form>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class='jumbotron'>
+          <strong>Opis:</strong>
+          <% if(proizvod.opis){ %>
+          <%= proizvod.opis %>
+          <% } else{ %>
+          <p>Nema opisa za prikazani proizvod</p>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KORPA -->
+  <% if (typeof proizvod != "undefined") { %>
+  <!-- make user available to script tag -->
+  <% var proizvod = proizvod; %>
+  <!-- use script tag to access ejs data and local storage -->
+  <script>
+    let proizvod =  <%- JSON.stringify(proizvod) %> ;
+    var elementi = document.getElementsByClassName("korpa");
+    elementi[0].addEventListener("click",async function () {
+      var x=await funkcija();
+      console.log(x);
+      if (localStorage.getItem(`${proizvod._id}`) != null) {
+        localStorage.setItem(`broj${proizvod._id}`, parseInt(localStorage.getItem(`broj${proizvod._id}`)) + parseInt(x));
+      }
+      else {
+        localStorage.setItem(`${proizvod._id}`, JSON.stringify(proizvod));
+        localStorage.setItem(`broj${proizvod._id}`, parseInt(x));
+      }
+    })   
+  </script>
+  <% } %>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src='/searchproduct.js'></script>
+
+  <%- include ('partials/footer.ejs'); %>

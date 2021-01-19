@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' />
+</head>
+
+<body>
+    <%- include('partials/navbar.ejs'); %>
+
+    <div class='container'>
+        <ul>
+            <div class='jumbotron'>
+                <h1>Prodavnice u našoj mreži</h1>
+            </div>
+            <div class='row'>
+                
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Ime prodavnice</th>
+                                    <th scope="col">Adresa prodavnice</th>
+                                    <th scope="col">Broj telefona</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i=0;i<prodavnice.length;i++){%>
+
+                                <tr>
+                                    <th style='background-color:white !important' scope="row"><%=i+1%></th>
+                                    <td><%=prodavnice[i].ime%></td>
+                                    <td><%=prodavnice[i].adresa%></td>
+                                    <td><%=prodavnice[i].telefon%></td>
+                                </tr>
+                                <%}%>
+                            </tbody>
+                        </table>
+                    </div>
+
+            </div>
+        </ul>
+    </div>
+    <%- include ('partials/footer.ejs'); %>

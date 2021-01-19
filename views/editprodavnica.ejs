@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <%- include('partials/navbar.ejs'); %>
+    <div class='container'>
+        <br>
+        <div class='row'>
+            <div style='width:35%;margin:0 auto;'>
+                <h2 style='text-align: center;'>Ažuriranje podataka o prodavnici</h2>
+
+                <form action='/profile/prodavac/prodavnica/<%=prodavnica._id%>?_method=PUT' method='post'>
+                    <div class='form-group'><input type='text' class='form-control' name='ime'
+                            value="<%=prodavnica.ime%>" /></div>
+                    <div class='form-group'><input type='text' class='form-control' name='adresa'
+                            value="<%=prodavnica.adresa%>" /></div>
+                    <div class='form-group'> <button type='submit' class='btn btn-lg btn-info btn-block form-control'
+                            style='margin-top:5%;'>Ažuriraj</button> </div>
+
+                </form>
+
+                <button type="submit" class="btn btn-danger btn-block" data-toggle="modal"
+                    data-target="#myModalObrisiProdavnicu<%= prodavnica._id %>">Uklanjanje prodavnice</button>
+
+            </div>
+        </div>
+    </div>
+    <!-- pocetak modala -->
+    <div class="modal" id="myModalObrisiProdavnicu<%=prodavnica._id %>" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Brisanje prodavnice <%=prodavnica.ime %></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Da li ste sigurni da želite da izbrišete prodavnicu?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Odustani</button>
+                    <form method='post' action='/profile/prodavac/prodavnica/<%=prodavnica._id%>?_method=DELETE'>
+                        <button type="submit" class="btn btn-danger">Izbriši</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- kraj modala -->
+    <%- include ('partials/footer.ejs'); %>
+
+    <script src="" async defer></script>

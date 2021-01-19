@@ -1,11 +1,9 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="/styles.css" />
-
-<div class="loader-wrapper">
-   <span class="loader"> <img width="150" height="150" src="/Logo Petcom.png">
-   </span>
-</div>
-
+<style>
+   .bg-dark,.btn-info,.btn-primary,th{
+      background-color: #3d1a68e6!important;
+   }
+</style>
 <nav class="navbar navbar-expand-xl sticky-top navbar-dark bg-dark" style='z-index: 1;'>
    <img src='/Logo.png' width="50" height="50"></img>
    <a class="navbar-brand" href="/">Cosmetics4U</a>
@@ -18,16 +16,15 @@
          <li class="nav-item ">
             <a class="nav-link" href="/">Početna stranica <span class="sr-only">(current)</span></a>
          </li>
-         <li class="nav-item">
-            <a class="nav-link" href="/showproducts">Proizvodi</a>
-         </li>
+         <li class="nav-item ">
+            <a class="nav-link" href="/shops">Prodavnice u našoj mreži <span class="sr-only">(current)</span></a>
          </li>
       </ul>
       <ul class='navbar-nav '>
          <form class="form-inline my-2 my-lg-0" action='/search'>
             <input type='hidden' name='brojfilter' value='10' />
             <input class="form-control mr-sm-2" name='key' type="search" placeholder="Pretraga proizvoda" aria-label="Search" />
-            <button class="btn btn-outline-success my-2 my-sm-0" style="margin-right:15px" type="submit">Pretraži</button>
+            <button class="btn btn-outline-light my-2 my-sm-0" style="margin-right:15px" type="submit">Pretraži</button>
          </form>
          <% if(user===undefined) {%>
          <li class='nav-item'>
@@ -58,15 +55,6 @@
             <li class="nav-item">
                <a class="nav-link" href="/logout">Odjavi se</a>
             </li>
-            <!-- <li class='nav-item'>
-                  <form method='post' action='/logout'>
-                     <button class="btn btn-link" type="submit">Odjavi se</button>
-                  </form>
-               </div>
-            </li> -->
-
-
-
          </ul>
          <%}%>
       </ul>
