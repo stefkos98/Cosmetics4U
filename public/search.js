@@ -102,6 +102,7 @@ prethodni.addEventListener("click", function () {
         document.getElementById(`link${k}`).parentElement.classList.remove("active");
         if (k == trenutnastranica) {
             pages[k - 1].classList.remove("klasa");
+            
             trenutnastranica = k;
             document.getElementById(`link${k}`).parentElement.classList.add("active");
         }
