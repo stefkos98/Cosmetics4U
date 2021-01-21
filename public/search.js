@@ -131,8 +131,6 @@ if(par2!=null) par2=par2.value;
 var par3 = document.querySelector("input[name='par3']").value;
 var par4 = document.querySelector("input[name='par4']").value;
 var par5=document.querySelector("input[name='par5']");
-var par6=document.querySelector("input[name='par6']");
-
 if(par5!=null) par5=par5.value;
 if (par5=="") par5=0;
 console.log(par1 + par2);
