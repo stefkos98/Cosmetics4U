@@ -476,7 +476,7 @@ app.delete("/profile/korisnik/:id", async (req, res) => {
         await Kupovina.findByIdAndDelete(k);
     }
     await Korisnik.findByIdAndDelete(req.params.id);
-    req.flash("success","Uspesno ste obrisali nalog vlasnika");
+    req.flash("success","Uspesno ste obrisali nalog");
 
     if (req.user._id===req.params.id) {
         req.logout();
@@ -738,7 +738,7 @@ app.post("/cart", async (req, res) => {
     }
     else if (user == undefined) {
         // res.writeHead(301, { 'Location': 'http://localhost:3000/login' });   
-        res.write("Niste ulogovani. Samo korisnici ulogovani kao Vlasnik mogu izvrsiti kupovinu");
+        res.write("Niste ulogovani. Samo korisnici ulogovani kao Korisnik mogu izvrsiti kupovinu");
         res.end();
     }
     else if (user.tipkorisnika != "korisnik") {
